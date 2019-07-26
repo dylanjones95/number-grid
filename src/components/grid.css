@@ -1,0 +1,41 @@
+#gridContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.numberBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 9.5vw;
+    background-color: #d3d3d3;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+}
+
+.numberBoxClicked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 9.5vw;
+    background-color: red;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+}
+
+#timeRemaining {
+    width: 100vw;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+

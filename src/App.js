@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route } from "react-router-dom"
 import './App.css';
+import Grid from "./components/grid"
+import Result from "./components/grid-components/result.js"
+import Start from "./components/grid-components/start"
 
-function App() {
+class App extends React.Component {
+
+  state = {
+    currentNumber: -1,
+    clicked: false
+}
+
+clickHandler = (number) => {
+  if (number === this.state.currentNumber + 1) {
+ 
+  this.setState({currentNumber: number, clicked: true}) 
+}
+}
+
+resetScore = () => {
+  this.setState({currentNumber: -1, clicked: false})
+}
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Router>
+      <h1 id="numberGridHeader">Number Grid</h1>
+      <Route id="start" exact path="/" render={() => <Start/>}></Route>
+      {/* <Route path="/" exact component={LogIn} /> */}
+      <Route id="grid" exact path="/grid" render={() => <Grid clicked = {this.state.clicked} currentNumber = {this.state.currentNumber} click = {this.clickHandler}/>} />
+      <Route id="result" exact path="/grid/result" render={() => <Result reset = {this.resetScore}currentNumber = {this.state.currentNumber} />} />
+      </Router>
     </div>
   );
+}
 }
 
 export default App;

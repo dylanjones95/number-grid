@@ -1,0 +1,35 @@
+#start {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+#instructions {
+    background-color: #d3d3d3;
+    width: 70vw;
+    text-align: justify;
+    padding: 5px 10px;
+}
+
+#instructionsHeader {
+    text-align: center;
+}
+
+#instructionsPara {
+    text-align: justify;
+    margin-top: 3px;
+}
+
+#startButton {
+    margin-top: 2vh;
+    padding: 6px;
+    border: 2px solid #007b60;
+    color: white;
+    background-color: #007b60;
+    font-weight: bold;
+    text-decoration: none;
+}
