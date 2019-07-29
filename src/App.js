@@ -4,12 +4,15 @@ import './App.css';
 import Grid from "./components/grid"
 import Result from "./components/grid-components/result.js"
 import Start from "./components/grid-components/start"
+import { shuffle, randomNumbers } from './components/grid-components/random';
+
 
 class App extends React.Component {
 
   state = {
     currentNumber: -1,
-    clicked: false
+    clicked: false,
+    grid: shuffle(randomNumbers)
 }
 
 clickHandler = (number) => {
@@ -20,7 +23,7 @@ clickHandler = (number) => {
 }
 
 resetScore = () => {
-  this.setState({currentNumber: -1, clicked: false})
+  this.setState({currentNumber: -1, clicked: false, grid: shuffle(randomNumbers)})
 }
 
 render() {
@@ -29,9 +32,8 @@ render() {
       <Router>
       <h1 id="numberGridHeader">Number Grid</h1>
       <Route id="start" exact path="/" render={() => <Start/>}></Route>
-      {/* <Route path="/" exact component={LogIn} /> */}
-      <Route id="grid" exact path="/grid" render={() => <Grid clicked = {this.state.clicked} currentNumber = {this.state.currentNumber} click = {this.clickHandler}/>} />
-      <Route id="result" exact path="/grid/result" render={() => <Result reset = {this.resetScore}currentNumber = {this.state.currentNumber} />} />
+      <Route id="grid" exact path="/grid" render={() => <Grid clicked = {this.state.clicked} currentNumber = {this.state.currentNumber} click = {this.clickHandler} numbers = {this.state.grid}/>} />
+      <Route id="result" exact path="/grid/result" render={() => <Result reset = {this.resetScore}currentNumber = {this.state.currentNumber}/>} />
       </Router>
     </div>
   );

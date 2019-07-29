@@ -26,9 +26,9 @@
     align-items: center;
     height: 30px;
     width: 9.5vw;
-    background-color: red;
+    background-color: #007b60;
     border: 1px solid black;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 

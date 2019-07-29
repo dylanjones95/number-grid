@@ -1,0 +1,29 @@
+[debug] [2019-07-29T13:29:06.273Z] ----------------------------------------------------------------------
+[debug] [2019-07-29T13:29:06.276Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2019-07-29T13:29:06.276Z] CLI Version:   7.2.1
+[debug] [2019-07-29T13:29:06.276Z] Platform:      darwin
+[debug] [2019-07-29T13:29:06.276Z] Node Version:  v10.15.3
+[debug] [2019-07-29T13:29:06.279Z] Time:          Mon Jul 29 2019 14:29:06 GMT+0100 (British Summer Time)
+[debug] [2019-07-29T13:29:06.279Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-29T13:29:06.292Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-29T13:29:06.293Z] > authorizing via signed-in user
+[debug] [2019-07-29T13:29:06.293Z] [iam] checking project numbergrid-6b581 for permissions ["firebase.projects.get"]
+[debug] [2019-07-29T13:29:06.294Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-07-29T13:29:06.294Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-07-29T13:29:06.517Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-29T13:29:06.528Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/numbergrid-6b581:testIamPermissions  
+
+[debug] [2019-07-29T13:29:07.693Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-29T13:29:07.695Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/numbergrid-6b581  
+ 
+[debug] [2019-07-29T13:29:08.126Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/cn0105/Desktop/number-grid/mern-number-grid-app'...
+[info] 
+[debug] [2019-07-29T13:29:08.130Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/numbergrid-6b581/webApps/-/config  
+ 
+[debug] [2019-07-29T13:29:08.493Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
