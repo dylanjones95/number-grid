@@ -26,7 +26,7 @@ export default class Timer extends Component {
                         seconds: 59
                     }))
                 }
-            } 
+            }
         }, 1000)
     }
 
@@ -38,11 +38,11 @@ export default class Timer extends Component {
         const { minutes, seconds } = this.state
         return (
             <div>
-                {  this.props.currentNumber === -1
+                {this.props.currentNumber === -1
                     ? <p>Score: 0</p>
                     : <p>Score: {this.props.currentNumber}</p>
                 }
-                { minutes === 0 && seconds === 0
+                {minutes === 0 && seconds === 0
                     ? < Redirect id="result" to="/grid/result" component={Result} />
                     : <p>Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</p>
                 }
